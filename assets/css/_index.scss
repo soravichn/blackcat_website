@@ -6,7 +6,7 @@
   background: #fff;
 }
 
-#header {
+.section1 {
   position: relative;
   height: 100vh;
   overflow: hidden;
@@ -16,6 +16,7 @@
     right: 2rem;
     top: 3rem;
     width: 23%;
+    z-index: -9;
     animation: circle 20s linear infinite;
   }
 
@@ -28,10 +29,27 @@
     }
   }
 
+  .cloud-img {
+    position: absolute;
+    width: 65%;
+    bottom: 5%;
+    z-index: -8;
+    animation: left_to_right 45s linear infinite;
+  }
+
+  @keyframes left_to_right {
+    0% {
+      transform: translateX(-100%)
+    }
+    100% {
+      transform: translateX(150%)
+    }
+  }
+
   .bg-head {
     width: 100%;
     position: absolute;
-    z-index: -1;
+    z-index: -10;
   }
 
   .box-head {
@@ -44,7 +62,8 @@
       font-weight: 500;
 
       img {
-        width: 49px;
+        width: 32px;
+        margin-right: 5px;
         vertical-align: unset;
       }
 
@@ -69,6 +88,7 @@
       text-decoration: none;
       height: 50px;
       line-height: 35px;
+      transition: ease 0.3s;
 
       &:hover {
         // background: $orange;

@@ -16,17 +16,18 @@
   background: #fff;
 }
 
-#header {
+.section1 {
   position: relative;
   height: 100vh;
   overflow: hidden;
 }
 
-#header .around-the-moon {
+.section1 .around-the-moon {
   position: absolute;
   right: 2rem;
   top: 3rem;
   width: 23%;
+  z-index: -9;
   -webkit-animation: circle 20s linear infinite;
           animation: circle 20s linear infinite;
 }
@@ -53,41 +54,73 @@
   }
 }
 
-#header .bg-head {
-  width: 100%;
+.section1 .cloud-img {
   position: absolute;
-  z-index: -1;
+  width: 65%;
+  bottom: 5%;
+  z-index: -8;
+  -webkit-animation: left_to_right 45s linear infinite;
+          animation: left_to_right 45s linear infinite;
 }
 
-#header .box-head {
+@-webkit-keyframes left_to_right {
+  0% {
+    -webkit-transform: translateX(-100%);
+            transform: translateX(-100%);
+  }
+  100% {
+    -webkit-transform: translateX(150%);
+            transform: translateX(150%);
+  }
+}
+
+@keyframes left_to_right {
+  0% {
+    -webkit-transform: translateX(-100%);
+            transform: translateX(-100%);
+  }
+  100% {
+    -webkit-transform: translateX(150%);
+            transform: translateX(150%);
+  }
+}
+
+.section1 .bg-head {
+  width: 100%;
+  position: absolute;
+  z-index: -10;
+}
+
+.section1 .box-head {
   padding: 15% 0 0;
 }
 
-#header .box-head h1 {
+.section1 .box-head h1 {
   text-transform: uppercase;
   font-size: 70px;
   margin: unset;
   font-weight: 500;
 }
 
-#header .box-head h1 img {
-  width: 49px;
+.section1 .box-head h1 img {
+  width: 32px;
+  margin-right: 5px;
   vertical-align: unset;
 }
 
-#header .box-head h1 span {
+.section1 .box-head h1 span {
   background: -webkit-gradient(linear, left top, left bottom, from(#f19c1d), to(#e53d09));
   background: linear-gradient(#f19c1d, #e53d09);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
 
-#header .box-head p {
+.section1 .box-head p {
   font-size: 25px;
   font-weight: 300;
 }
 
-#header .box-head .btn-link {
+.section1 .box-head .btn-link {
   font-size: 15px;
   font-weight: 300;
   border-radius: 25px;
@@ -96,14 +129,16 @@
   text-decoration: none;
   height: 50px;
   line-height: 35px;
+  -webkit-transition: ease 0.3s;
+  transition: ease 0.3s;
 }
 
-#header .box-head .btn-link:hover {
+.section1 .box-head .btn-link:hover {
   color: #E88431;
   border-color: #E88431;
 }
 
-#header .box-head .btn-link:focus {
+.section1 .box-head .btn-link:focus {
   -webkit-box-shadow: unset;
           box-shadow: unset;
 }
