@@ -16,26 +16,34 @@
 </head>
 
 <body>
-  <!-- <nav class="navbar navbar-expand-lg navbar-custom">
-    <div class="container">
+  <nav class="navbar navbar-expand-lg navbar-custom">
+    <div class="container nav-set">
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#slide_down">
-        <span class="navbar-toggler-icon"><img src="assets/images/logoblackcat.png" alt=""></span>
+        <!-- <span class="navbar-toggler-icon"><img src="assets/images/logoblackcat.png" alt=""></span> -->
       </button>
 
       <div class="navbar-collapse collapse" id="slide_down">
         <ul class="navbar-nav nav-fill w-100">
           <li class="nav-item">
-            <a class="nav-link" href="#">about us</a>
+            <a class="nav-link" href="#section2">about us</a>
           </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">services</a>
+          <li class="nav-item dropdown">
+            <a class="nav-link" href="#section3">services <i class="fas fa-sort-down align-top"></i></a>
+            <div class="dropdown-content">
+              <a href="#">Website design & development </a>
+              <a href="#">Search Engine Optimization</a>
+              <a href="#">Marketing Strategy</a>
+              <a href="#">Graphic design</a>
+              <a href="#">Production</a>
+              <a href="#">Business consulting</a>
+            </div>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="#">clients</a>
           </li>
           <li class="nav-item d-none d-lg-block">
-            <a class="nav-link" href="">
-              <img src="assets/images/logoblackcat.png" alt="">
+            <a href="#section1">
+              <img src="assets/images/logoblackcat.png" class="nav-logo">
             </a>
           </li>
           <li class="nav-item">
@@ -50,9 +58,9 @@
         </ul>
       </div>
     </div>
-  </nav> -->
+  </nav>
 
-  <section class="section1">
+  <section class="section1" id="section1">
     <div class="bg-head">
       <img src="assets/images/aliment/circle-moon.svg" alt="" class="around-the-moon">
       <img src="assets/images/cloud.png" alt="" class="cloud-img">
@@ -67,7 +75,7 @@
     </div>
   </section>
 
-  <section class="section2">
+  <section class="section2" id="section2">
     <div class="about-us">
       <div class="row">
         <div class="col-lg-4">
@@ -151,7 +159,7 @@
     <img src="assets/images/about-footer.png" class="w-100">
   </section>
 
-  <section class="section3">
+  <section class="section3" id="section3">
     <img src="assets/images/aliment/line1.png" class="line-animate">
     <div class="text-main" id="our_head" style="margin: auto;">OUR SERVICES</div>
     <div class="our-service">

@@ -3,7 +3,111 @@
   top: 0;
   z-index: 10;
   width: 100%;
-  background: #fff;
+  background: transparent;
+  height: 70px;
+
+  .nav-set {
+    margin: 0 25%;
+    height: 100%;
+
+    .nav-logo {
+      width: 20px;
+      transition: ease 0.3s;
+      vertical-align: -webkit-baseline-middle;
+
+      &:hover {
+        width: 30px;
+      }
+    }
+
+    .nav-link {
+      color: #000;
+      font-size: 15px;
+      font-weight: 400;
+      display: inline-block;
+      position: relative;
+
+      &:hover {
+        color: $orange;
+
+        &::after {
+          width: 100%;
+          left: 0;
+        }
+      }
+
+      &::after {
+        background: none repeat scroll 0 0 transparent;
+        bottom: 0;
+        content: "";
+        display: block;
+        height: 2px;
+        left: 50%;
+        position: absolute;
+        background: $orange;
+        transition: width 0.3s ease 0s, left 0.3s ease 0s;
+        width: 0;
+      }
+
+      &.active {
+        color: $orange;
+
+        &::after {
+          width: 100%;
+          left: 0;
+        }
+      }
+    }
+
+    .dropdown {
+      .dropdown-content {
+        border-radius: 5px;
+        display: none;
+        position: absolute;
+        background-color: #fff;
+        width: max-content;
+        z-index: 1;
+
+        a {
+          float: none;
+          color: #000;
+          padding: 12px 16px;
+          text-decoration: none;
+          display: block;
+          text-align: left;
+          position: relative;
+
+          &:hover {
+            color: $orange;
+
+            &::after {
+              width: 100%;
+              left: 0;
+            }
+          }
+    
+          &::after {
+            background: none repeat scroll 0 0 transparent;
+            bottom: 0;
+            content: "";
+            display: block;
+            height: 2px;
+            left: 50%;
+            position: absolute;
+            background: $orange;
+            transition: width 0.3s ease 0s, left 0.3s ease 0s;
+            width: 0;
+          }
+        }
+      }
+
+      &:hover {
+        .dropdown-content {
+          display: block;
+        }
+      }
+    }
+  }
 }
 
 .section1 {
@@ -14,8 +118,9 @@
   .bg-head {
     background-image: url(../images/bg-head.png);
     width: 100%;
-    background-size: contain;
+    background-size: 100%;
     background-repeat: no-repeat;
+    background-position: bottom;
     position: absolute;
     z-index: -10;
     height: 100%;
@@ -24,7 +129,7 @@
   .around-the-moon {
     position: absolute;
     right: 2rem;
-    top: 3rem;
+    bottom: 405px;
     width: 23%;
     z-index: -9;
     animation: circle 20s linear infinite;
@@ -91,7 +196,7 @@
 
 .section2 {
   height: 100%;
-  padding-top: 3rem;
+  padding-top: 5rem;
 
   .about-us {
     padding: 0 10% 0 15%;
@@ -99,9 +204,9 @@
 
   .spin-circle {
     position: absolute;
-    right: 26%;
+    right: 25%;
     z-index: -10;
-    top: 18%;
+    top: 19%;
     width: 45%;
     animation: circle 10s linear infinite;
   }
@@ -158,8 +263,9 @@
 }
 
 .section3 {
-  padding: 7rem 0;
-  height: 100%;
+  // padding: 5rem 0;
+  padding-top: 5rem;
+  height: 100vh;
   position: relative;
   overflow: hidden;
 
@@ -170,7 +276,7 @@
   }
 
   .our-service {
-    padding: 0 15%;
+    padding: 3rem 15% 0;
 
     .box-service {
       display: flex;
@@ -251,7 +357,7 @@
 
 @keyframes top-right-to-bottom-left {
   0% {
-    top: -20%;
+    top: -30%;
     right: -23%;
     opacity: 0;
   }
@@ -261,7 +367,7 @@
     opacity: 1;
   }
   100% {
-    top: -20%;
+    top: -30%;
     right: -23%;
     opacity: 0;
   }
