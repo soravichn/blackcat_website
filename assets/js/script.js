@@ -15,8 +15,17 @@ $(document).ready(function () {
   //     $(this).parent().addClass("active");
   //   }
   // });
-
-  ScrollReveal().reveal('.reveal-box-head', { delay: 2800 });
+  
+  ScrollReveal().reveal('.about-us', { delay: 500 });
+  ScrollReveal().reveal('.why-choose', { delay: 500 });
+  ScrollReveal().reveal('.about-us-footer', { delay: 500 });
+  ScrollReveal().reveal('#our_head', { delay: 500 });
+  ScrollReveal().reveal('#service_1', { delay: 800 });
+  ScrollReveal().reveal('#service_2', { delay: 1100 });
+  ScrollReveal().reveal('#service_3', { delay: 1400 });
+  ScrollReveal().reveal('#service_4', { delay: 1700 });
+  ScrollReveal().reveal('#service_5', { delay: 2000 });
+  ScrollReveal().reveal('#service_6', { delay: 2300 });
 
   setTimeout(function () {
     generateText('\bLACK\zCAT\q', 100, 200, '.text-gerate');
