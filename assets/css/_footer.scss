@@ -32,15 +32,6 @@ footer {
     padding: 0 3rem 2rem 0;
   }
 
-  @media screen and (max-width: 800px) {
-    text-align: center;
-    padding: 1rem 15%;
-
-    .set-pad {
-      padding: 0 0 1rem;
-    }
-  }
-
   @media screen and (max-width: 1200px) {
     padding-top: 2rem;
 
@@ -51,6 +42,15 @@ footer {
     a {
       font-size: 13px;
       line-height: 25px;
+    }
+  }
+
+  @media screen and (max-width: 800px) {
+    text-align: center;
+    padding: 1rem 15%;
+
+    .set-pad {
+      padding: 0 0 1rem;
     }
   }
 
@@ -87,15 +87,6 @@ footer {
       font-size: 15px;
       font-weight: 300;
       margin-bottom: unset;
-
-    }
-    
-    @media screen and (max-width: 800px) {
-      margin-top: 1rem;
-      
-      .set-center {
-        text-align: center;
-      }
     }
 
     @media screen and (max-width: 1200px) {
@@ -103,6 +94,14 @@ footer {
 
       h5 {
         font-size: 13px;
+      }
+    }
+
+    @media screen and (max-width: 800px) {
+      margin-top: 1rem;
+
+      .set-center {
+        text-align: center;
       }
     }
   }
