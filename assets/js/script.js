@@ -32,7 +32,7 @@ function scrollShowNav() {
   var nav = $(".navbar-custom");
   $(window).scroll(function () {
     var scroll = $(window).scrollTop();
-    if (scroll >= 200) {
+    if (scroll >= 150) {
       nav.addClass("scroll-show");
     } else {
       nav.removeClass("scroll-show");
@@ -65,13 +65,14 @@ function scrollReveal() {
   sr.reveal('.about-us', { delay: 200 });
   sr.reveal('.why-choose', { delay: 400 });
   sr.reveal('.about-us-footer', { delay: 200 });
+  sr.reveal('.end-sec2', { delay: 200 });
   sr.reveal('#our_head', { delay: 200 });
-  sr.reveal('#service_1', { delay: 500 });
-  sr.reveal('#service_2', { delay: 800 });
-  sr.reveal('#service_3', { delay: 1100 });
-  sr.reveal('#service_4', { delay: 1300 });
-  sr.reveal('#service_5', { delay: 1600 });
-  sr.reveal('#service_6', { delay: 1900 });
+  sr.reveal('#service_1', { delay: 400 });
+  sr.reveal('#service_2', { delay: 600 });
+  sr.reveal('#service_3', { delay: 800 });
+  sr.reveal('#service_4', { delay: 1000 });
+  sr.reveal('#service_5', { delay: 1200 });
+  sr.reveal('#service_6', { delay: 1400 });
 }
 
 // mobile nav slide
