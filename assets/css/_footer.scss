@@ -1,0 +1,109 @@
+footer {
+  background: #212121;
+  color: #fff;
+  padding: 5rem 10% 1rem;
+
+  h2 {
+    font-size: 20px;
+    font-weight: 400;
+  }
+
+  p {
+    font-size: 15px;
+    font-weight: 300;
+    margin-bottom: unset;
+    color: $gray;
+  }
+
+  a {
+    display: block;
+    color: $gray;
+    font-size: 15px;
+    font-weight: 300;
+    line-height: 30px;
+
+    &:hover {
+      text-decoration: none;
+      color: $orange;
+    }
+  }
+
+  .set-pad {
+    padding: 0 3rem 2rem 0;
+  }
+
+  @media screen and (max-width: 800px) {
+    text-align: center;
+    padding: 1rem 15%;
+
+    .set-pad {
+      padding: 0 0 1rem;
+    }
+  }
+
+  @media screen and (max-width: 1200px) {
+    padding-top: 2rem;
+
+    p {
+      font-size: 13px;
+    }
+
+    a {
+      font-size: 13px;
+      line-height: 25px;
+    }
+  }
+
+  .social {
+    display: inline-flex;
+
+    img {
+      filter: grayscale(100%);
+
+      &:hover {
+        filter: grayscale(0);
+      }
+    }
+  }
+
+  .small-map {
+    width: 100%;
+    filter: grayscale(100%);
+
+    &:hover {
+      filter: grayscale(0);
+    }
+  }
+
+  .copyright {
+    margin-top: 3rem;
+
+    .set-center {
+      text-align: right;
+    }
+
+    h5 {
+      display: contents;
+      font-size: 15px;
+      font-weight: 300;
+      margin-bottom: unset;
+
+    }
+    
+    @media screen and (max-width: 800px) {
+      margin-top: 1rem;
+      
+      .set-center {
+        text-align: center;
+      }
+    }
+
+    @media screen and (max-width: 1200px) {
+      margin-top: 1rem;
+
+      h5 {
+        font-size: 13px;
+      }
+    }
+  }
+}
