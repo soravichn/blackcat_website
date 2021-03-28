@@ -70,9 +70,9 @@ function scrollReveal() {
   sr.reveal('#service_1', { delay: 400 });
   sr.reveal('#service_2', { delay: 600 });
   sr.reveal('#service_3', { delay: 800 });
-  sr.reveal('#service_4', { delay: 1000 });
-  sr.reveal('#service_5', { delay: 1200 });
-  sr.reveal('#service_6', { delay: 1400 });
+  sr.reveal('#service_4', { delay: 400 });
+  sr.reveal('#service_5', { delay: 600 });
+  sr.reveal('#service_6', { delay: 800 });
 }
 
 // mobile nav slide
