@@ -109,7 +109,7 @@
     }
 
     @media screen and (max-width: 500px) {
-      padding: 20% 1rem 0;
+      padding: 20% 2rem 0;
 
       .line {
         width: 13rem;
@@ -174,7 +174,7 @@
     }
 
     @media screen and (max-width: 500px) {
-      padding: 0 1rem;
+      padding: 0 2rem;
     }
   }
 
@@ -334,7 +334,7 @@
   overflow: hidden;
 
   @media screen and (max-width: 800px) {
-    padding: 2rem 10%;
+    padding: 3rem 10% 0;
   }
 
   .line-animate {
@@ -446,6 +446,10 @@
 .section4 {
   padding-top: 5rem;
 
+  @media screen and (max-width: 800px) {
+    padding-top: 3rem;
+  }
+
   .thank-your {
     text-align: center;
     margin-top: 1rem;
@@ -458,7 +462,17 @@
   .box-partner {
     padding: 3rem 15%;
 
+    @media screen and (max-width: 1200px) {
+      padding: 1rem 10%;
+    }
+
+    @media screen and (max-width: 500px) {
+      padding: 1rem 2rem;
+    }
+
     .partner-logo {
+      max-width: 100%;
+      padding: 1rem;
       margin: auto;
       height: 136px;
       width: 208px;
@@ -487,7 +501,15 @@
 .section6 {
   padding: 3rem 15%;
 
-  a {
+  @media screen and (max-width: 1200px) {
+    padding: 3rem 10%;
+  }
+
+  @media screen and (max-width: 500px) {
+    padding: 3rem 0 1rem;
+  }
+
+  .hover-img {
     display: flex;
     justify-content: center;
     align-items: flex-start;
@@ -520,10 +542,58 @@
       }
     }
   }
+
+  .owl-work {
+    position: relative;
+    overflow: hidden;
+
+    .owl-nav {
+      position: absolute;
+      width: 100%;
+      z-index: 1;
+      top: 25%;
+      display: flex;
+      justify-content: space-between;
+      padding: 0 1rem;
+
+      .owl-prev,
+      .owl-next {
+        font-size: 70px;
+        color: $orange;
+        background: transparent;
+        font-weight: 300;
+      }
+    }
+
+    .owl-dots {
+      margin-top: 1rem;
+
+      .owl-dot {
+        &.active,
+        &:hover {
+          span {
+            background: $orange !important;
+          }
+        }
+
+        span {
+          background: $gray;
+        }
+      }
+    }
+  }
 }
 
 .section7 {
   padding: 4rem 15%;
+
+  @media screen and (max-width: 1200px) {
+    padding: 4rem 10%;
+  }
+
+  @media screen and (max-width: 500px) {
+    padding: 3rem 2rem;
+  }
 
   .box-form {
     margin-top: 3rem;
@@ -538,6 +608,24 @@
     label {
       font-size: 20px;
       font-weight: 300;
+    }
+    @media screen and (max-width: 1200px) {
+      h2 {
+        font-size: 25px;
+      }
+    }
+
+    @media screen and (max-width: 800px) {
+      margin-top: 2rem;
+
+      h2 {
+        font-size: 18px;
+        margin-bottom: 1rem;
+      }
+
+      label {
+        font-size: 15px;
+      }
     }
 
     input,
@@ -601,50 +689,94 @@
         top: 50%;
         transition: all 0.3s;
       }
+
+      @media screen and (max-width: 1200px) {
+        &::after,
+        &::before {
+          width: 70%;
+        }
+      }
+
+      @media screen and (max-width: 800px) {
+        height: 35px;
+        width: 140px;
+        font-size: 15px;
+
+        &::after,
+        &::before {
+          width: 160%;
+        }
+      }
+
+      @media screen and (max-width: 500px) {
+        &::after,
+        &::before {
+          width: 55%;
+        }
+      }
+    }
+  }
+
+  .icon-contact {
+    margin-top: 2rem;
+
+    a {
+      filter: grayscale(100%);
+      color: gray;
+
+      img {
+        width: 47px;
+      }
+
+      p {
+        font-size: 20px;
+        font-weight: 400;
+        margin: 10px 0 0;
+      }
     }
 
-    .icon-contact {
-      margin-top: 2rem;
+    #line_contact:hover {
+      text-decoration: none;
+      color: #60c162;
+      filter: grayscale(0);
+    }
+
+    #fb_contact:hover {
+      text-decoration: none;
+      color: #4f74b7;
+      filter: grayscale(0);
+    }
+
+    #ig_contact:hover {
+      text-decoration: none;
+      color: #f04a79;
+      filter: grayscale(0);
+    }
+
+    @media screen and (max-width: 800px) {
+      margin-top: unset;
 
       a {
-        filter: grayscale(100%);
-        color: gray;
-
-        img {
-          width: 47px;
-        }
-
         p {
-          font-size: 20px;
-          font-weight: 400;
-          margin: 10px 0 0;
+          font-size: 15px;
         }
-      }
-
-      #line_contact:hover {
-        text-decoration: none;
-        color: #60c162;
-        filter: grayscale(0);
-      }
-
-      #fb_contact:hover {
-        text-decoration: none;
-        color: #4f74b7;
-        filter: grayscale(0);
-      }
-
-      #ig_contact:hover {
-        text-decoration: none;
-        color: #f04a79;
-        filter: grayscale(0);
       }
     }
   }
 
   .box-map {
-    margin: 3rem 0;
+    margin: 3rem 0 1rem;
 
-    .text-contact {
+    img {
+      filter: grayscale(100%);
+
+      &:hover {
+        filter: grayscale(0);
+      }
+    }
+
+    .text-contact,
+    .text-content-mobile {
       position: relative;
       margin-top: 10px;
 
@@ -652,6 +784,10 @@
         font-size: 15px;
         font-weight: 300;
         color: #000;
+
+        @media screen and (max-width: 800px) {
+          font-size: 13px;
+        }
       }
 
       .tel {
@@ -661,6 +797,20 @@
       .address {
         position: absolute;
         right: 0;
+      }
+
+      @media screen and (max-width: 500px) {
+        .tel {
+          margin-bottom: 1rem;
+          display: block;
+        }
+
+        .address {
+          position: unset;
+          right: unset;
+          display: block;
+          margin-bottom: 1rem;
+        }
       }
     }
   }

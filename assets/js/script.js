@@ -5,6 +5,23 @@ $(document).ready(function () {
   scrollSmooth();
   scrollShowNav();
   scrollActive();
+
+  $(".owl-work").owlCarousel({
+    stagePadding: 50,
+    loop: true,
+    margin: 10,
+    nav: true,
+    items: 1,
+    responsive: {
+      300: {
+        stagePadding: 20,
+
+      },
+      500: {
+        stagePadding: 40,
+      }
+    }
+  });
 });
 
 // scroll active
@@ -60,12 +77,15 @@ function scrollReveal() {
     duration: 2000,
     reset: false
   })
+  // section1
   sr.reveal('.section1', {});
   sr.reveal('.reveal-box-head', { delay: 400 });
+  // section2
   sr.reveal('.about-us', { delay: 200 });
   sr.reveal('.why-choose', { delay: 400 });
   sr.reveal('.about-us-footer', { delay: 200 });
   sr.reveal('.end-sec2', { delay: 200 });
+  // section3
   sr.reveal('#our_head', { delay: 200 });
   sr.reveal('#service_1', { delay: 400 });
   sr.reveal('#service_2', { delay: 600 });
@@ -73,6 +93,20 @@ function scrollReveal() {
   sr.reveal('#service_4', { delay: 400 });
   sr.reveal('#service_5', { delay: 600 });
   sr.reveal('#service_6', { delay: 800 });
+  // section4
+  sr.reveal('#head_clients', { delay: 200 });
+  sr.reveal('.thank-your', { delay: 400 });
+  sr.reveal('.box-partner', { delay: 600 });
+  // section6
+  sr.reveal('#head_works', { delay: 200 });
+  sr.reveal('#show_work', { delay: 600 });
+  // section7
+  sr.reveal('#head_contact', { delay: 200 });
+  sr.reveal('.box-form', { delay: 600 });
+  sr.reveal('#line_contact', { delay: 200 });
+  sr.reveal('#fb_contact', { delay: 400 });
+  sr.reveal('#ig_contact', { delay: 600 });
+  sr.reveal('.box-map', { delay: 200 });
 }
 
 // mobile nav slide

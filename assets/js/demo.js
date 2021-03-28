@@ -156,7 +156,6 @@ $(document).ready(function () {
       },
       500: {
         stagePadding: 40,
-
       }
     }
   })
