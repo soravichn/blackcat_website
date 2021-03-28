@@ -22,6 +22,12 @@ $(document).ready(function () {
       }
     }
   });
+
+  $(".owl-block").owlCarousel({
+    loop: true,
+    margin: 32,
+    items: 3,
+  });
 });
 
 // scroll active
@@ -97,9 +103,13 @@ function scrollReveal() {
   sr.reveal('#head_clients', { delay: 200 });
   sr.reveal('.thank-your', { delay: 400 });
   sr.reveal('.box-partner', { delay: 600 });
+  // section5
+  sr.reveal('#head_block', { delay: 200 });
+  sr.reveal('.owl-block', { delay: 400 });
   // section6
   sr.reveal('#head_works', { delay: 200 });
   sr.reveal('#show_work', { delay: 600 });
+  sr.reveal('.owl-work', { delay: 600 });
   // section7
   sr.reveal('#head_contact', { delay: 200 });
   sr.reveal('.box-form', { delay: 600 });

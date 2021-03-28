@@ -498,6 +498,105 @@
   }
 }
 
+.section5 {
+  padding: 5rem 15% 0;
+  height: 100vh;
+  position: relative;
+
+  .animate-circle-block {
+    position: absolute;
+    left: 10%;
+    top: 20%;
+
+    .line-o {
+      position: absolute;
+      left: -80px;
+      top: -80px;
+      animation: circle 10s linear infinite;
+    }
+
+    @media screen and (max-width: 1400px) {
+      top: 10%;
+    }
+  }
+
+  .owl-block {
+    position: relative;
+    overflow: hidden;
+
+    .filter-block {
+      filter: grayscale(100%);
+      opacity: 0.9 !important;
+      transition: ease 0.3ms;
+
+      &:hover {
+        filter: grayscale(0);
+        opacity: 1 !important;
+      }
+    }
+
+    .block-detail {
+      padding: 1rem;
+      background: #00000008;
+      height: 270px;
+      position: relative;
+
+      .title {
+        font-size: 20px;
+        font-weight: 400;
+        color: #000;
+        word-break: break-word;
+        margin-bottom: 1rem;
+      }
+
+      @media (min-width: 800px) and (max-width: 1200px) {
+        height: 300px;
+
+        .title {
+          font-size: 15px;
+        }
+      }
+
+      .description {
+        font-size: 15px;
+        font-weight: 300;
+        word-break: break-word;
+        color: #000;
+      }
+
+      .see-block {
+        position: absolute;
+        bottom: 1rem;
+        color: #000;
+        font-size: 15px;
+        font-weight: 300;
+        text-decoration: none;
+
+        &:hover {
+          color: $orange;
+        }
+      }
+    }
+
+    .owl-dots {
+      margin-top: 1rem !important;
+
+      .owl-dot {
+        &.active,
+        &:hover {
+          span {
+            background: $orange !important;
+          }
+        }
+
+        span {
+          background: $gray;
+        }
+      }
+    }
+  }
+}
+
 .section6 {
   padding: 3rem 15%;
 
@@ -566,7 +665,7 @@
     }
 
     .owl-dots {
-      margin-top: 1rem;
+      margin-top: 1rem !important;
 
       .owl-dot {
         &.active,
@@ -586,6 +685,8 @@
 
 .section7 {
   padding: 4rem 15%;
+  position: relative;
+  overflow: hidden;
 
   @media screen and (max-width: 1200px) {
     padding: 4rem 10%;
@@ -593,6 +694,41 @@
 
   @media screen and (max-width: 500px) {
     padding: 3rem 2rem;
+  }
+
+  .animate-circle-contact {
+    position: absolute;
+    right: -10%;
+
+    .circle-right {
+      position: absolute;
+      right: -10%;
+      width: 300px;
+    }
+
+    .line-x {
+      position: absolute;
+      top: -20px;
+      right: -15px;
+      width: 340px;
+      animation: circle 10s linear infinite;
+    }
+
+    @media screen and (min-width: 2000px) {
+      right: -5%;
+    }
+
+    @media screen and (max-width: 800px) {
+      top: 5%;
+
+      .circle-right {
+        width: 150px;
+      }
+
+      .line-x {
+        width: 185px;
+      }
+    }
   }
 
   .box-form {
@@ -814,6 +950,19 @@
       }
     }
   }
+
+  .line-animate-bottom {
+    position: absolute;
+    z-index: -100;
+    left: 0;
+    width: 20%;
+    bottom: 30%;
+    animation: bottom-left-to-top-right 5s infinite;
+
+    @media screen and (max-width: 800px) {
+      width: 40%;
+    }
+  }
 }
 
 .text-main {
@@ -904,5 +1053,20 @@
   100% {
     opacity: 0;
     transform: translate3d(100%, -100%, 0);
+  }
+}
+
+@keyframes bottom-left-to-top-right {
+  0% {
+    opacity: 0;
+    transform: translate3d(-100%, 100%, 0);
+  }
+  50% {
+    opacity: 1;
+    transform: translateZ(0);
+  }
+  100% {
+    opacity: 0;
+    transform: translate3d(-100%, 100%, 0);
   }
 }
